@@ -1,0 +1,16 @@
+
+Terminal 1
+1. cd ardupilot/Arduplane
+2. sim_vehicle.py --console --map --aircraft test -L Aurora
+3. wp load ../Tools/autotest/ArduPlane-Missions/waypoint3.txt
+4. mode auto
+5. arm throttle
+
+Terminal 2
+5. roslaunch mavros apm2.launch fcu_url:=udp://localhost:14550@
+
+Terminal 3
+6. Run the landing node : rosrun package_name node_name :or: python landing.py  
+
+Sequence of commands
+1,2,3,4, 6, 7, 5  
